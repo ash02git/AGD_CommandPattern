@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using Command.Commands;
 
 namespace Command.Player
 {
@@ -88,6 +89,11 @@ namespace Command.Player
             units[activeUnitIndex].ResetUnitIndicator();
             activeUnitIndex--;
             units[activeUnitIndex].StartUnitTurn();
+        }
+
+        public void ProcessUnitCommand(UnitCommand commandToProcess)
+        {
+            GetUnitByID(commandToProcess.commandData.ActorUnitID).ProcessUnitCommand(commandToProcess);
         }
     }
 }

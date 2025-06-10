@@ -17,6 +17,7 @@ namespace Command.Actions
         {
             this.actorUnit = actorUnit;
             this.targetUnit = targetUnit;
+            this.isSuccessful = isSuccessful;
 
             actorUnit.PlayBattleAnimation(CommandType.BerserkAttack, CalculateMovePosition(targetUnit), OnActionAnimationCompleted);
         }
