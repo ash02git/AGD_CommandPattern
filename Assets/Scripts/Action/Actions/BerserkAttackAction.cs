@@ -36,7 +36,6 @@ namespace Command.Actions
             }
         }
 
-        //public bool IsSuccessful() => Random.Range(0f, 1f) < hitChance;
 
         public Vector3 CalculateMovePosition(UnitController targetUnit) => targetUnit.GetEnemyPosition();
     }
