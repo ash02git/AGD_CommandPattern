@@ -1,5 +1,6 @@
 using Command.Actions;
 using Command.Main;
+using System;
 
 namespace Command.Player
 {
@@ -95,6 +96,11 @@ namespace Command.Player
                 PlayerDied(player1);
             else if (player2.AllUnitsDead())
                 PlayerDied(player2);
+        }
+
+        public void ProcessUnitCommand(UnitCommand unitCommand)//have to implement
+        {
+            throw new NotImplementedException();
         }
     }
 }
