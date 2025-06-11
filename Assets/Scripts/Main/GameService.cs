@@ -9,6 +9,7 @@ using Command.Events;
 using Command.Battle;
 using Command.Actions;
 using Command.Commands;
+using Command.Replay;
 
 namespace Command.Main
 {
@@ -31,6 +32,8 @@ namespace Command.Main
 
         public CommandInvoker CommandInvoker { get; private set; }
 
+        public ReplayService ReplayService { get; private set; }
+
         [SerializeField] private UIService uiService;
         public UIService UIService => uiService;
 
@@ -52,6 +55,7 @@ namespace Command.Main
             PlayerService = new PlayerService();
             uiService.Init(battleScriptableObjects.Count);
             CommandInvoker = new CommandInvoker();
+            ReplayService = new ReplayService();
         }
 
         private void Update() => InputService.UpdateInputService();
